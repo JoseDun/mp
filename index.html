@@ -26,7 +26,19 @@
                 <ul class="nav-menu">
                     <li><a href="#inicio" class="nav-link active">Inicio</a></li>
                     <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
-                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li class="service-menu-item">
+                        <div class="service-link-container">
+                            <a href="#servicios" class="nav-link">Servicios</a>
+                            <img src="./assets/downArrow.svg" alt="arrow down" class="arrow-down">
+                        </div>
+                        <ul class="submenu">
+                            <li><a href="#perinatal">Psicología Perinatal</a></li>
+                            <li><a href="#infantil">Psicología Infantil</a></li>
+                            <li><a href="#lactancia">Asesoría De Lactancia</a></li>
+                            <li><a href="#sueno-infantil">Asesoría Sueño Infantil</a></li>
+                        </ul>
+                    </li>
+
                     <li><a href="#faqs" class="nav-link">FAQ's</a></li>
                     <li><a href="#blog" class="nav-link">Blog</a></li>
                 </ul>
@@ -47,8 +59,7 @@
         <!-- Hero Section -->
         <section id="inicio" class="hero">
             <div class="hero-background">
-                <img src="./assets/Maria-Palos-Beso-Bebe.png" alt="Mujer embarazada"
-                    class="hero-image">
+                <img src="./assets/Maria-Palos-Beso-Bebe.png" alt="Mujer embarazada" class="hero-image">
             </div>
             <div class="hero-content">
                 <div class="hero-quote">
@@ -320,8 +331,7 @@
                 <div class="footer-services">
                     <h4>SERVICIOS</h4>
                     <ul>
-                        <li><img src="https://ext.same-assets.com/3119597855/2097490936.svg" alt=""> <a
-                                href="#perinatal">Psicología Perinatal</a></li>
+                        <li><img src="./assets/downArrow.svg" alt=""> <a href="#perinatal">Psicología Perinatal</a></li>
                         <li><img src="https://ext.same-assets.com/3119597855/4041148847.svg" alt=""> <a
                                 href="#infantil">Psicología Infantil</a></li>
                         <li><img src="https://ext.same-assets.com/3119597855/680472626.svg" alt=""> <a
@@ -338,7 +348,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Copyright 2024 © Todos los derechos reservados María Palos · <a href="#">Política de Cookies</a> · <a href="#">Política de Privacidad</a></p>
+                <p>Copyright 2024 © Todos los derechos reservados María Palos · <a href="#">Política de Cookies</a> · <a
+                        href="#">Política de Privacidad</a></p>
             </div>
         </div>
     </footer>

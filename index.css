@@ -202,6 +202,23 @@ strong {
     justify-content: center;
 }
 
+.service-link-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.arrow-down {
+    width: 16px;
+    height: 16px;
+    filter: invert(65%) sepia(11%) saturate(1464%) hue-rotate(358deg) brightness(93%) contrast(86%);
+    transition: filter 0.3s ease;
+}
+
+.service-menu-item:hover .arrow-down {
+    filter: invert(65%) sepia(11%) saturate(1464%) hue-rotate(358deg) brightness(93%) contrast(86%);
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -215,6 +232,64 @@ strong {
     background: #b79269;
     transition: all 0.3s ease;
 }
+
+/* Submenu */
+.submenu {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff7ef;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* Add margin to create space */
+    padding: 10px 0;
+    min-width: 220px;
+    z-index: 100;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.submenu li {
+    list-style: none;
+}
+
+.submenu li a {
+    display: block;
+    padding: 12px 24px;
+    color: #b79269;
+    font-weight: 500;
+    font-size: 1.05rem;
+    font-family: 'Lato', sans-serif;
+    transition: background 0.2s ease;
+}
+
+.submenu li a:hover {
+    background-color: #f1e4d5;
+    color: #826f5f;
+}
+
+/* Show submenu on hover */
+.service-menu-item {
+    position: relative;
+}
+
+/* Add a pseudo-element to bridge the gap */
+.service-menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px; /* Positioned in the gap */
+    height: 10px; /* Same height as the gap */
+}
+
+.service-menu-item:hover > .submenu,
+.submenu:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 /* Hero Section */
 .hero {
