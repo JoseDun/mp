@@ -12,34 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Smooth Scrolling for Navigation Links
-    const navLinks = document.querySelectorAll('.nav-link, .cta-button, .learn-more-btn, .service-btn, .contact-btn');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-
-            if (href && href.startsWith('#')) {
-                e.preventDefault();
-
-                const target = document.querySelector(href);
-                if (target) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-
-                    // Close mobile menu if open
-                    nav.classList.remove('active');
-                    mobileToggle.classList.remove('active');
-                }
-            }
-        });
-    });
-
     // Testimonial Carousel
     const testimonialSlides = document.querySelectorAll('.testimonial-slide');
     const testimonialDots = document.querySelectorAll('.dot');
@@ -136,24 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
         element.style.transform = 'translateY(30px)';
         element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(element);
-    });
-
-    // Header Scroll Effect
-    const header = document.querySelector('.header');
-    let lastScrollTop = 0;
-
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up
-            header.style.transform = 'translateY(0)';
-        }
-
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
 
     // Form Validation
