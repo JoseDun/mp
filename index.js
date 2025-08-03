@@ -40,31 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Active Navigation Link on Scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navigationLinks = document.querySelectorAll('.nav-link');
-
-    function updateActiveNavLink() {
-        const scrollPosition = window.scrollY + 100;
-
-        sections.forEach(section => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-            const id = section.getAttribute('id');
-
-            if (scrollPosition >= top && scrollPosition < top + height) {
-                navigationLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }
-
-    window.addEventListener('scroll', updateActiveNavLink);
-
     // Testimonial Carousel
     const testimonialSlides = document.querySelectorAll('.testimonial-slide');
     const testimonialDots = document.querySelectorAll('.dot');
@@ -138,70 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Newsletter Form
-    const newsletterForm = document.getElementById('newsletter-form');
-
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const email = this.querySelector('input[type="email"]').value;
-            const checkbox = this.parentElement.querySelector('input[type="checkbox"]');
-
-            if (!checkbox.checked) {
-                alert('Debes aceptar la Política de Privacidad para continuar.');
-                return;
-            }
-
-            // Simulate form submission
-            alert(`¡Gracias! Hemos enviado la guía a tu email: ${email}`);
-
-            // Reset form
-            this.reset();
-            checkbox.checked = false;
-        });
-    }
-
-    // Cookie Banner
-    const cookieBanner = document.getElementById('cookie-banner');
-    const acceptCookies = document.getElementById('accept-cookies');
-    const rejectCookies = document.getElementById('reject-cookies');
-
-    // Check if cookies have been accepted
-    const cookiesAccepted = localStorage.getItem('cookiesAccepted');
-
-    if (!cookiesAccepted && cookieBanner) {
-        // Show cookie banner after a delay
-        setTimeout(() => {
-            cookieBanner.classList.add('show');
-        }, 2000);
-    }
-
-    if (acceptCookies) {
-        acceptCookies.addEventListener('click', function() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            cookieBanner.classList.remove('show');
-        });
-    }
-
-    if (rejectCookies) {
-        rejectCookies.addEventListener('click', function() {
-            localStorage.setItem('cookiesAccepted', 'false');
-            cookieBanner.classList.remove('show');
-        });
-    }
-
-    // WhatsApp Float Button
-    const whatsappFloat = document.querySelector('.whatsapp-float');
-
-    if (whatsappFloat) {
-        whatsappFloat.addEventListener('click', function() {
-            const phoneNumber = '34634187692'; // María's phone number
-            const message = encodeURIComponent('¡Hola María! Me gustaría conocer más sobre tus servicios.');
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-            window.open(whatsappUrl, '_blank');
-        });
-    }
 
     // Scroll Animations
     const animatedElements = document.querySelectorAll('.service-card, .about-image, .about-text');
@@ -324,19 +235,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Contact Modal (if needed)
-    const contactBtns = document.querySelectorAll('.contact-btn');
-
-    contactBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            if (this.getAttribute('href') === '#contacto') {
-                e.preventDefault();
-                // You can implement a contact modal here
-                alert('¡Hola! Puedes contactarme directamente por WhatsApp o email. ¡Estaré encantada de ayudarte!');
-            }
-        });
-    });
-
     // Performance Optimization - Debounce Scroll Events
     function debounce(func, wait) {
         let timeout;
@@ -348,45 +246,6 @@ document.addEventListener('DOMContentLoaded', function() {
             clearTimeout(timeout);
             timeout = setTimeout(later, wait);
         };
-    }
-
-    const debouncedScrollHandler = debounce(updateActiveNavLink, 100);
-    window.removeEventListener('scroll', updateActiveNavLink);
-    window.addEventListener('scroll', debouncedScrollHandler);
-
-    // Analytics Events (Google Analytics integration)
-    function trackEvent(eventName, eventData = {}) {
-        if (typeof gtag !== 'undefined') {
-            gtag('event', eventName, eventData);
-        }
-    }
-
-    // Track button clicks
-    document.querySelectorAll('.cta-button, .service-btn, .learn-more-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            trackEvent('button_click', {
-                button_text: this.textContent,
-                button_location: this.closest('section')?.id || 'unknown'
-            });
-        });
-    });
-
-    // Track WhatsApp clicks
-    if (whatsappFloat) {
-        whatsappFloat.addEventListener('click', function() {
-            trackEvent('whatsapp_click', {
-                source: 'floating_button'
-            });
-        });
-    }
-
-    // Track Newsletter Signup
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function() {
-            trackEvent('newsletter_signup', {
-                form_location: 'main_page'
-            });
-        });
     }
 
     console.log('María Palos website loaded successfully! 🌟');
