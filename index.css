@@ -1,4 +1,3 @@
-
 /* Reset and Base Styles */
 *,
 *::before,
@@ -995,7 +994,6 @@ strong {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-
     .header .container {
         justify-content: space-around;
     }
@@ -1028,6 +1026,11 @@ strong {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
+        padding-inline: 72px;
+    }
+
+    .newsletter-image>img {
+        display: inline;
     }
 
     body>footer>section {
@@ -1180,6 +1183,10 @@ strong {
         display: none;
     }
 
+    .newsletter-content {
+        padding-inline: 48px;
+    }
+
     /* Footer Mobile */
     .footer-content {
         flex-direction: column;
@@ -1295,6 +1302,10 @@ strong {
 
     .testimonial-slide {
         padding: 30px 25px;
+    }
+
+    .newsletter-content {
+        padding-inline: 2px;
     }
 
     .footer-logo {
