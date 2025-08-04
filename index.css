@@ -527,11 +527,14 @@ strong {
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
 }
 
 .service-btn{
+    margin-top: auto;
     align-self: center;
+    margin-bottom: 20px;
 }
 
 .service-icon {
