@@ -1,3 +1,4 @@
+
 /* Reset and Base Styles */
 *,
 *::before,
@@ -832,6 +833,7 @@ strong {
 
 .newsletter-form {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
     margin: 30px 0;
 }
@@ -846,6 +848,7 @@ strong {
 }
 
 .newsletter-form button {
+    width: 100%;
     padding: 15px 30px;
     background: #b79269;
     color: white;
