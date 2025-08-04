@@ -303,15 +303,17 @@ strong {
 }
 
 /* Hero Section */
+/* Hero Section CSS - Ajustado para coincidir con la imagen */
 .hero {
     position: relative;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     overflow: hidden;
+    min-height: 80vh; /* Se añade altura para que la sección sea visible */
+    padding: 40px 20px; /* Espaciado para móviles */
 }
 
 .hero-background {
@@ -323,49 +325,75 @@ strong {
     z-index: -1;
 }
 
+/* Se añade una capa semitransparente para aclarar la imagen de fondo */
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.7);
+    /* Se elimina el filtro 'brightness' para usar la capa superior */
 }
 
 .hero-content {
-    background: rgba(226, 198, 171, 0.9);
-    padding: 60px 40px;
-    border-radius: 20px;
-    max-width: 800px;
-    margin: 0 20px;
-    backdrop-filter: blur(10px);
+    background: rgba(226, 198, 171, 0.85);
+    padding: 20px 180px;
+    /* max-width: 750px; */
+    /* margin: 0 auto; */
+    /* border-radius: 0; */
+    /* backdrop-filter: none; */
+    align-self: flex-start;
 }
 
-.hero-quote h2 {
-    font-size: 2.5rem;
-    color: white;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
+/* Estilos base para todo el texto de la cita */
+.hero-quote h2,
+.hero-quote p,
+.hero-quote h3 {
+    color: #ffffff; /* El texto en la imagen es oscuro, no blanco */
+    text-shadow: none; /* Se elimina la sombra de texto */
+    font-family: 'Pompiere', serif; /* Una fuente más parecida a la imagen */
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    color: #ffffff;
+    font-size: 50px;
 
-.hero-quote p {
-    font-size: 1.8rem;
-    color: white;
-    margin-bottom: 1.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-quote h3 {
-    font-size: 2.2rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+     color: #ffffff;
+    font-size: 45px;
+    margin-top: 1rem; /* Espacio para separar la última línea */
 }
 
+
+/* Espaciado del contenedor del botón */
 .hero-cta {
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
+/* Estilos para el botón de llamada a la acción */
 .hero-cta .cta-button {
-    font-size: 1.2rem;
-    padding: 18px 35px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    background-color: #E2C6AB; /* Mismo color que la caja de texto */
+    border-radius: 50px; /* Para que sea un botón tipo "píldora" */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.hero-cta .cta-button:hover {
+    transform: scale(1.05); /* Efecto sutil al pasar el cursor */
 }
 
 /* About Section */
