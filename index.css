@@ -344,13 +344,12 @@ strong {
 }
 
 .hero-content {
-    background: rgba(226, 198, 171, 0.85);
+    background: rgba(226, 198, 171, 0.7);
     padding: 20px 180px;
     /* max-width: 750px; */
     /* margin: 0 auto; */
     /* border-radius: 0; */
     /* backdrop-filter: none; */
-    align-self: flex-start;
 }
 
 /* Estilos base para todo el texto de la cita */
