@@ -406,6 +406,7 @@ strong {
 .section-header {
     text-align: center;
     margin-bottom: 60px;
+    font-family: 'Montserrat'
 }
 
 .section-header h2 {
@@ -424,6 +425,8 @@ strong {
     grid-template-columns: 1fr 1.5fr;
     gap: 60px;
     align-items: center;
+    max-width: 1480px; /* Ancho máximo aplicado */
+    margin: 0 auto;    /* Centra el contenedor horizontalmente */
 }
 
 .about-image img {
