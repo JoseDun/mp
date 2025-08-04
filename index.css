@@ -206,6 +206,13 @@ strong {
     justify-content: center;
 }
 
+.contact-btn img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    margin-left: 8px;
+}
+
 .service-link-container {
     display: flex;
     align-items: center;
