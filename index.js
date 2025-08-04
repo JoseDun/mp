@@ -4,12 +4,62 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const serviceMenuItem = document.querySelector('.service-menu-item');
+    const serviceLink = document.querySelector('.service-menu-item .nav-link');
 
-    if (mobileToggle && nav) {
+    if (mobileToggle && nav && navOverlay) {
         mobileToggle.addEventListener('click', function() {
             nav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
             mobileToggle.classList.toggle('active');
         });
+    }
+
+    // Mobile Submenu Toggle
+    const arrowDown = document.querySelector('.arrow-down');
+    
+    if (serviceMenuItem && serviceLink && arrowDown) {
+        // Click en la flecha para abrir/cerrar submenú
+        arrowDown.addEventListener('click', function(e) {
+            // Solo en mobile (cuando el menú está activo)
+            if (nav.classList.contains('active')) {
+                e.preventDefault();
+                e.stopPropagation();
+                serviceMenuItem.classList.toggle('active');
+            }
+        });
+        
+        // También permitir click en "Servicios" para abrir/cerrar
+        serviceLink.addEventListener('click', function(e) {
+            // Solo en mobile (cuando el menú está activo)
+            if (nav.classList.contains('active')) {
+                e.preventDefault();
+                serviceMenuItem.classList.toggle('active');
+            }
+        });
+    }
+
+    // Close mobile menu when clicking outside or on overlay
+    function closeMobileMenu() {
+        if (nav && navOverlay && mobileToggle) {
+            nav.classList.remove('active');
+            navOverlay.classList.remove('active');
+            mobileToggle.classList.remove('active');
+        }
+    }
+
+    document.addEventListener('click', function(e) {
+        if (nav && nav.classList.contains('active')) {
+            if (!nav.contains(e.target) && !mobileToggle.contains(e.target)) {
+                closeMobileMenu();
+            }
+        }
+    });
+
+    // Close menu when clicking on overlay
+    if (navOverlay) {
+        navOverlay.addEventListener('click', closeMobileMenu);
     }
 
     // Testimonial Carousel
