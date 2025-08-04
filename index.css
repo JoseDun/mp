@@ -511,12 +511,13 @@ strong {
 }
 
 /* Services Section */
-.services{
+.services {
     background: #f4ebe1;
     padding-inline: 16px;
     padding-bottom: 16px;
 
 }
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -530,13 +531,14 @@ strong {
     justify-content: space-between;
 }
 
-.service-btn{
+.service-btn {
     margin-top: auto;
     align-self: center;
     margin-bottom: 20px;
 }
-#servicios > .container > .services-grid > .service-card:nth-child(2){
-background: #ead0ba;
+
+#servicios>.container>.services-grid>.service-card:nth-child(2) {
+    background: #ead0ba;
 }
 
 
@@ -571,7 +573,7 @@ background: #ead0ba;
     font-size: 20px;
     line-height: 30px;
     text-size-adjust: 100%;
-   font-weight: 400;
+    font-weight: 400;
     font-family: 'Poppins';
 }
 
@@ -597,6 +599,7 @@ background: #ead0ba;
 }
 
 /* Quote Section */
+/* Quote Section */
 .quote-section {
     position: relative;
     height: 70vh;
@@ -613,31 +616,48 @@ background: #ead0ba;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -2;
 }
 
 .quote-background img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.6);
+    filter: brightness(1);
+    /* sin oscurecer */
+}
+
+/* Capa blanca sobre la imagen para suavizarla */
+.quote-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.65);
+    /* blanco translúcido */
+    z-index: -1;
 }
 
 .quote-content {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 60px 40px;
-    border-radius: 20px;
-    max-width: 900px;
-    margin: 0 20px;
-    backdrop-filter: blur(10px);
+    padding: 0 40px;
+    max-width: 1240px;
 }
 
 .quote-content blockquote {
-    font-size: 1.8rem;
-    color: #333;
-    font-style: italic;
-    line-height: 1.6;
-    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 45px;
+    color: #5a4e52;
+    font-family: 'Pompiere', cursive;
+    quotes: "“" "”";
+    text-size-adjust: 100%;
+}
+
+.quote-content blockquote::before,
+.quote-content blockquote::after {
+    content: '"';
+    font-size: 2.4rem;
 }
 
 /* Testimonials Section */
