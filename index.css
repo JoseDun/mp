@@ -43,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', serif;
     font-weight: 600;
     line-height: 1.2;
 }
@@ -160,6 +160,7 @@ strong {
     transition: color 0.3s ease;
     position: relative;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav-link.active {
@@ -272,8 +273,9 @@ strong {
     padding: 12px 24px;
     color: #b79269;
     font-weight: 500;
-    font-size: 1.05rem;
-    font-family: 'Lato', sans-serif;
+    font-size: 17.6px;
+    line-height: 28.16px;
+    font-family: 'Poppins', sans-serif;
     transition: background 0.2s ease;
     cursor: pointer;
 }
@@ -409,25 +411,31 @@ strong {
 
 /* About Section */
 .about {
-    padding: 100px 0;
+    padding-top: 56px;
+    padding-bottom: 8px;
     background: white;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
     font-family: 'Montserrat'
 }
 
 .section-header h2 {
-    font-size: 3rem;
-    color: #b79269;
+    font-size: 40px;
+    color: #C89A69;
+    line-height: 40px;
+    text-size-adjust: 100%;
+    font-weight: 600;
 }
 
 .section-header h3 {
-    font-size: 1.5rem;
-    color: #826f5f;
-    font-weight: 400;
+    font-size: 35px;
+    color: #C89A69;
+    font-weight: 600;
+    line-height: 35px;
+    text-size-adjust: 100%;
 }
 
 .about-content {
@@ -840,7 +848,7 @@ strong {
 .footer-contact h4,
 .footer-services h4 {
     margin-bottom: 20px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 
