@@ -535,6 +535,10 @@ strong {
     align-self: center;
     margin-bottom: 20px;
 }
+#servicios > .container > .services-grid > .service-card:nth-child(2){
+background: #ead0ba;
+}
+
 
 .service-icon {
     margin-bottom: 25px;
