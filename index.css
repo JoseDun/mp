@@ -456,13 +456,13 @@ strong {
     border-radius: 20px;
 }
 
-.about-text{
+.about-text {
     display: flex;
     flex-direction: column;
     padding-top: 16px;
 }
 
-.learn-more-btn{
+.learn-more-btn {
     align-self: center;
 }
 
@@ -499,7 +499,7 @@ strong {
     max-width: 1480px;
     margin: 0 auto 20px;
     font-family: 'poppins';
-    line-height: 33px ;
+    line-height: 33px;
     font-weight: 400;
     text-size-adjust: 100%;
 
@@ -978,7 +978,7 @@ strong {
         text-align: center;
     }
 
-    body>footer>div {
+    body>footer>section {
         background: #0b0b0b;
     }
 
@@ -1162,9 +1162,6 @@ strong {
         text-align: center;
     }
 
-    body>footer>div {
-        background: #0b0b0b;
-    }
 }
 
 @media (max-width: 480px) {
