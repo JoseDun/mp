@@ -159,6 +159,7 @@ strong {
     font-size: 1.1rem;
     transition: color 0.3s ease;
     position: relative;
+    cursor: pointer;
 }
 
 .nav-link.active {
@@ -274,6 +275,7 @@ strong {
     font-size: 1.05rem;
     font-family: 'Lato', sans-serif;
     transition: background 0.2s ease;
+    cursor: pointer;
 }
 
 .submenu li a:hover {
