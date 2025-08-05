@@ -174,7 +174,6 @@ strong {
     right: 0;
     height: 2px;
     background: #b79269;
-
 }
 
 .nav-link.active::after {
@@ -192,6 +191,10 @@ strong {
     align-items: center;
     gap: 10px;
     padding-top: 21px;
+}
+
+.header-image img {
+    width: 90%;
 }
 
 .contact-btn {
@@ -379,7 +382,6 @@ strong {
     margin: 0;
     color: #ffffff;
     font-size: 50px;
-
 }
 
 .hero-quote h3 {
@@ -388,7 +390,6 @@ strong {
     margin-top: 1rem;
     /* Espacio para separar la última línea */
 }
-
 
 /* Espaciado del contenedor del botón */
 .hero-cta {
@@ -458,8 +459,7 @@ strong {
 }
 
 .about-image img {
-    width: 70%;
-    border-radius: 20px;
+    width: 80%;
 }
 
 .about-text {
@@ -508,7 +508,6 @@ strong {
     line-height: 33px;
     font-weight: 400;
     text-size-adjust: 100%;
-
 }
 
 .help-format {
@@ -522,7 +521,6 @@ strong {
     background: #f4ebe1;
     padding-inline: 16px;
     padding-bottom: 16px;
-
 }
 
 .services-grid {
@@ -547,7 +545,6 @@ strong {
 #servicios>.container>.services-grid>.service-card:nth-child(2) {
     background: #ead0ba;
 }
-
 
 .service-icon {
     margin-bottom: 25px;
@@ -808,7 +805,6 @@ strong {
     text-size-adjust: 100%;
     font-family: 'Montserrat', serif;
     text-align: center;
-
 }
 
 .newsletter-text p {
@@ -880,7 +876,6 @@ strong {
 .newsletter-image picture {
     width: 60%;
     object-fit: cover;
-
 }
 
 /* Footer */
@@ -1021,7 +1016,6 @@ strong {
 
     .about-image img {
         width: 100%;
-
     }
 
     .services-grid {
@@ -1227,7 +1221,6 @@ strong {
         gap: 15px;
         text-align: center;
     }
-
 }
 
 @media (max-width: 480px) {
@@ -1318,5 +1311,4 @@ strong {
     .footer-logo {
         max-width: 120px;
     }
-
 }

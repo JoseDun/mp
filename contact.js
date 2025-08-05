@@ -1,30 +1,31 @@
+
 // Funcionalidad del formulario de contacto
 document.addEventListener('DOMContentLoaded', function() {
-  const contactForm = document.getElementById('contactForm') as HTMLFormElement;
+  const contactForm = document.getElementById('contactForm');
   
   if (contactForm) {
     // Elementos del formulario
-    const nombreInput = document.getElementById('nombre') as HTMLInputElement;
-    const telefonoInput = document.getElementById('telefono') as HTMLInputElement;
-    const emailInput = document.getElementById('email') as HTMLInputElement;
-    const mensajeTextarea = document.getElementById('mensaje') as HTMLTextAreaElement;
-    const privacidadCheckbox = document.getElementById('privacidad') as HTMLInputElement;
-    const submitBtn = contactForm.querySelector('.submit-btn') as HTMLButtonElement;
+    const nombreInput = document.getElementById('nombre');
+    const telefonoInput = document.getElementById('telefono');
+    const emailInput = document.getElementById('email');
+    const mensajeTextarea = document.getElementById('mensaje');
+    const privacidadCheckbox = document.getElementById('privacidad');
+    const submitBtn = contactForm.querySelector('.submit-btn');
     
     // Función para validar email
-    function isValidEmail(email: string): boolean {
+    function isValidEmail(email) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(email);
     }
     
     // Función para validar teléfono
-    function isValidPhone(phone: string): boolean {
+    function isValidPhone(phone) {
       const phoneRegex = /^[+]?[\d\s\-\(\)]{9,}$/;
       return phoneRegex.test(phone.trim());
     }
     
     // Función para mostrar mensajes
-    function showMessage(message: string, type: 'success' | 'error') {
+    function showMessage(message, type) {
       // Remover mensajes anteriores
       const existingMessages = contactForm.querySelectorAll('.success-message, .error-message');
       existingMessages.forEach(msg => msg.remove());
@@ -88,9 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Función para validar todo el formulario
-    function validateForm(): boolean {
+    function validateForm() {
       let isValid = true;
-      let errors: string[] = [];
+      let errors = [];
       
       // Validar nombre
       if (nombreInput.value.trim().length < 2) {
@@ -134,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Función para simular envío del formulario
-    function submitForm(formData: FormData): Promise<boolean> {
+    function submitForm(formData) {
       return new Promise((resolve) => {
         // Simular tiempo de procesamiento
         setTimeout(() => {
@@ -216,6 +217,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
   }
 });
-
 // Configurar opacidad inicial
 document.body.style.opacity = '0';
