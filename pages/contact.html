@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - María Palos</title>
+  <meta name="description"
+    content="¿En qué puedo ayudarte? Si tienes alguna duda, puedes ponerte en contacto conmigo y contarme qué es lo que necesitas." />
+  <link rel="stylesheet" href="../styles/contact.css" />
+  <link rel="stylesheet" href="../index.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <picture class="about-image">
+        <img src="./assets/Logo-Maria-Palos-PNG.png" alt="María Palos - Psicóloga Perinatal y Lactancia">
+      </picture>
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li><a class="nav-link active">Inicio</a></li>
+          <li><a class="nav-link">Sobre Mí</a></li>
+          <li class="service-menu-item">
+            <div class="service-link-container">
+              <a class="nav-link">Servicios</a>
+              <img src="./assets/downArrow.svg" alt="arrow down" class="arrow-down">
+            </div>
+            <ul class="submenu">
+              <li><a>Psicología Perinatal</a></li>
+              <li><a>Psicología Infantil</a></li>
+              <li><a>Asesoría De Lactancia</a></li>
+              <li><a>Asesoría Sueño Infantil</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav-link">FAQ's</a></li>
+          <li><a class="nav-link">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="#contacto" class="contact-btn">¡Contacta! <img src="./assets/rigthArrow.svg" alt="right arrow"
+            class="arrow-right"> </a>
+      </div>
+
+      <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section with Image -->
+    <section class="hero-section">
+      <div class="hero-image">
+        <img src="../assets/Maria-Palos-contacto.png" alt="María Palos - Psicóloga Perinatal" />
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+      <article class="contact-container">
+        <div>
+          <h1 class="contact-title">¿En qué puedo ayudarte?</h1>
+          <p class="contact-subtitle">Si tienes alguna duda, puedes ponerte en contacto conmigo y contarme qué es lo que
+            necesitas.</p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Correo electrónico" required />
+          </div>
+
+          <div class="form-group">
+            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
+          </div>
+
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="privacidad" name="privacidad" required />
+              <span class="checkmark"></span>
+              Acepto la <a href="#" class="privacy-link">Política de Privacidad.</a>
+            </label>
+          </div>
+
+          <button type="submit" class="submit-btn">Quiero contactar</button>
+        </form>
+
+        <div class="privacy-text">
+          <p>María Palos solicita su consentimiento para prestarle el servicio solicitado y contestar a las cuestiones
+            planteadas. La legitimación tiene como base jurídica el consentimiento del interesado para los fines
+            expresados. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal. En
+            todo caso, los datos que nos facilitas están ubicados en servidores cuya sede se encuentra dentro del
+            territorio de la UE o gestionados por Encargados de Tratamiento acogidos al acuerdo Privacy Shield. Tiene
+            derecho a acceder, rectificar y suprimir los datos, así como otros derechos, como se explica en la
+            información adicional. Si no facilitas los datos solicitados como obligatorios, puede dar como resultado no
+            poder cumplir con la finalidad para los que se solicitan.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <section class="container">
+      <div class="footer-content">
+        <picture class="footer-brand">
+          <img src="./assets/Logo-Maria-Palos-PNG.png" alt="María Palos" class="footer-logo">
+        </picture>
+
+        <div class="footer-contact">
+          <h4>CONTACTO</h4>
+          <p><a href="mailto:hola@mariapalos.com">hola@mariapalos.com</a></p>
+          <p><a href="tel:634187692">634187692</a></p>
+        </div>
+
+        <div class="footer-services">
+          <h4>SERVICIOS</h4>
+          <ul>
+            <li><img src="./assets/downArrow.svg" alt=""> <a>Psicología Perinatal</a></li>
+            <li><img src="https://ext.same-assets.com/3119597855/4041148847.svg" alt=""> <a>Psicología
+                Infantil</a></li>
+            <li><img src="https://ext.same-assets.com/3119597855/680472626.svg" alt=""> <a>Asesoría de
+                lactancia</a></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <img src="https://ext.same-assets.com/3119597855/1310018240.svg" alt="Facebook">
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src="https://ext.same-assets.com/3119597855/3673399157.svg" alt="Instagram">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright 2024 © Todos los derechos reservados María Palos · <a href="#">Política de Cookies</a> · <a
+            href="#">Política de Privacidad</a></p>
+      </div>
+    </section>
+  </footer>
+
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
