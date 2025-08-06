@@ -1,5 +1,6 @@
 // DOM Content Loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    //! Inicio Header
 
     // Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
@@ -61,8 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (navOverlay) {
         navOverlay.addEventListener('click', closeMobileMenu);
     }
+    //! Fin Header
 
-    // Testimonial Carousel
+    //* Inicio Testimonial Carousel
     const testimonialSlides = document.querySelectorAll('.testimonial-slide');
     const testimonialDots = document.querySelectorAll('.dot');
     const prevBtn = document.querySelector('.testimonial-nav.prev');
@@ -135,6 +137,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+        // Testimonial Touch/Swipe Support for Mobile
+    let startX = 0;
+    let endX = 0;
+
+    if (testimonialCarousel) {
+        testimonialCarousel.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+        });
+
+        testimonialCarousel.addEventListener('touchend', function(e) {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const difference = startX - endX;
+            const threshold = 50;
+
+            if (Math.abs(difference) > threshold) {
+                if (difference > 0) {
+                    // Swipe left - next slide
+                    nextSlide();
+                } else {
+                    // Swipe right - previous slide
+                    prevSlide();
+                }
+            }
+        }
+    }
+
+    // Keyboard Navigation for Testimonials
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+        }
+    });
+
+        //* Fin Testimonial Carousel
 
     // Scroll Animations
     const animatedElements = document.querySelectorAll('.service-card, .about-image, .about-text');
@@ -198,45 +240,6 @@ document.addEventListener('DOMContentLoaded', function() {
             img.style.opacity = '1';
         });
         imageObserver.observe(img);
-    });
-
-    // Testimonial Touch/Swipe Support for Mobile
-    let startX = 0;
-    let endX = 0;
-
-    if (testimonialCarousel) {
-        testimonialCarousel.addEventListener('touchstart', function(e) {
-            startX = e.touches[0].clientX;
-        });
-
-        testimonialCarousel.addEventListener('touchend', function(e) {
-            endX = e.changedTouches[0].clientX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            const difference = startX - endX;
-            const threshold = 50;
-
-            if (Math.abs(difference) > threshold) {
-                if (difference > 0) {
-                    // Swipe left - next slide
-                    nextSlide();
-                } else {
-                    // Swipe right - previous slide
-                    prevSlide();
-                }
-            }
-        }
-    }
-
-    // Keyboard Navigation for Testimonials
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowLeft') {
-            prevSlide();
-        } else if (e.key === 'ArrowRight') {
-            nextSlide();
-        }
     });
 
     // Performance Optimization - Debounce Scroll Events
