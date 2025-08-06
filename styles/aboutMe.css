@@ -1,0 +1,181 @@
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #ffffff;
+}
+
+/* Main Content */
+/* Blog Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+/* Blog Card */
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+}
+
+.blog-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Blog Content */
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.blog-content h3 {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #b79269;
+  margin-bottom: 15px;
+}
+
+.blog-excerpt {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: auto;
+}
+
+.blog-readmore {
+  margin-top: 15px;
+  align-self: flex-start;
+  color: #b79269;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.blog-readmore:hover {
+  color: #8d6641;
+}
+
+.newsletter{
+  background-color: #e3ccb4;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-main-content {
+    flex-wrap: wrap;
+  }
+
+  .contact-section {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+
+  .contact-form {
+    margin: 0 20px 40px;
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    padding: 15px 25px;
+    font-size: 16px;
+  }
+
+  .contact-image {
+    padding: 20px;
+  }
+
+  .contact-image img {
+    max-width: 100%;
+  }
+
+  .privacy-text {
+    margin: 0 20px;
+    padding: 20px;
+  }
+
+  .contact-container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .contact-main-content {
+    padding-top: 0px;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-form {
+    padding: 0px 0px;
+  }
+
+  .checkbox-label {
+    font-size: 13px;
+  }
+
+  .privacy-text p {
+    font-size: 12px;
+    padding-inline: 0;
+  }
+
+  .contact-section {
+    padding-inline: 0px;
+  }
+}
