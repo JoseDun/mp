@@ -674,6 +674,8 @@ strong {
 .testimonial-track {
     overflow: hidden;
     position: relative;
+    min-height: 360px; /* ajusta según el testimonio más largo */
+    transition: min-height 0.3s ease-in-out;
 }
 
 /* Slides */
