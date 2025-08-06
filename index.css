@@ -666,9 +666,8 @@ strong {
 
 /* Testimonials Section */
 .testimonials {
-    padding: 100px 0;
+    padding: 32px 0;
     background: #f6e7d7;
-    /* color igual al fondo de la imagen */
     text-align: center;
 }
 
@@ -676,7 +675,6 @@ strong {
     margin-bottom: 40px;
     font-size: 2.5rem;
     color: #b79269;
-    /* título color similar al de la imagen */
 }
 
 /* Carrusel */
@@ -764,47 +762,23 @@ strong {
     width: 18px;
     height: 18px;
     filter: brightness(0.6);
-    /* tono marrón claro */
     transition: transform 0.3s ease;
 }
 
 .testimonial-nav.prev {
     left: -10px;
-    color: #C89A69;
 }
 
 .testimonial-nav.next {
     right: -10px;
-    color: #C89A69;
 }
 
-.testimonial-nav:hover img {
-    transform: scale(1.2);
+.testimonial-nav img {
+    width: 20px;
+    height: 20px;
+    filter: invert(69%) sepia(26%) saturate(564%) hue-rotate(358deg) brightness(89%) contrast(84%);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .testimonial-slide blockquote {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-
-    .testimonial-slide cite strong {
-        font-size: 1.2rem;
-    }
-
-    .testimonial-slide cite span {
-        font-size: 0.9rem;
-    }
-
-    .testimonial-nav.prev {
-        left: 5px;
-    }
-
-    .testimonial-nav.next {
-        right: 5px;
-    }
-}
 
 
 /* Newsletter Section */
@@ -1071,7 +1045,6 @@ strong {
 }
 
 @media (max-width: 767px) {
-
     /* Header Mobile */
     .header .container {
         flex-direction: row;
@@ -1140,7 +1113,6 @@ strong {
 
     .nav-actions {
         display: none;
-        /* Keep actions hidden on tablet and mobile */
     }
 
     /* Submenu Mobile */
@@ -1197,17 +1169,25 @@ strong {
 
     .about,
     .services,
-    .testimonials,
     .newsletter {
         padding: 60px 0;
     }
 
-    .newsletter-form {
-        flex-direction: column;
+    .testimonial-slide blockquote {
+        font-size: 1rem;
+        padding: 0 10px;
     }
 
-    .testimonial-nav {
-        display: none;
+    .testimonial-slide cite strong {
+        font-size: 1.2rem;
+    }
+
+    .testimonial-slide cite span {
+        font-size: 0.9rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
     }
 
     .newsletter-content {
