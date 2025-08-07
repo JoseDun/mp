@@ -32,6 +32,7 @@
 
 .about-card > p {
   max-width: 1380px;
+  text-size-adjust: 100%;
 }
 
 .about-intro-text {
