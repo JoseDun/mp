@@ -120,6 +120,72 @@
   background-color: #f6e7d7;
 }
 
+/* seccion de embarazo */
+.about-curiosities-container {
+  background: #f4e5d1;
+}
+
+.about-curiosities-content {
+    display: flex;
+    min-height: 500px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.about-curiosities-text-section {
+    padding: 60px 50px;
+    color: #6b5b47;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 600px;
+}
+
+.about-curiosities-image-section {
+  background-color: #c4a989;
+}
+
+.about-curiosities-title {
+  font-size: 36px;
+  font-weight: 300;
+  color: #b8936f;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about-curiosities-intro {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  color: #6b5b47;
+  opacity: 0.9;
+}
+
+.about-curiosities-quote {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 35px 0;
+  color: #b8936f;
+  font-style: italic;
+  padding-left: 20px;
+  border-left: 3px solid #b8936f;
+}
+
+.about-curiosities-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #6b5b47;
+  opacity: 0.9;
+}
+
+.about-curiosities-highlight {
+  color: #8b7355;
+  font-weight: 600;
+}
+
 /* Responsive Design */
 
 @media (max-width: 1000px) {
@@ -129,6 +195,26 @@
     gap: 8px;
   }
 
+}
+
+@media (max-width: 968px) {
+  .about-curiosities-content {
+    flex-direction: column;
+  }
+
+  .about-curiosities-image-section {
+    min-height: 300px;
+    order: 2;
+  }
+
+  .about-curiosities-text-section {
+    padding: 40px 30px;
+    order: 1;
+  }
+
+  .about-curiosities-title {
+    font-size: 32px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -155,6 +241,36 @@
     padding: 12px 25px;
     font-size: 14px;
   }
+
+  .about-curiosities-container {
+    margin: 10px;
+    border-radius: 12px;
+  }
+
+  .about-curiosities-text-section {
+    padding: 30px 25px;
+  }
+
+  .about-curiosities-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .about-curiosities-intro,
+  .about-curiosities-description {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .about-curiosities-quote {
+    font-size: 20px;
+    margin: 25px 0;
+    padding-left: 15px;
+  }
+
+  .about-curiosities-image-section {
+    min-height: 250px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -180,6 +296,36 @@
     padding: 10px 20px;
     font-size: 13px;
   }
+
+  .about-curiosities-container {
+    margin: 5px;
+    border-radius: 10px;
+  }
+
+  .about-curiosities-text-section {
+    padding: 25px 20px;
+  }
+
+  .about-curiosities-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .about-curiosities-intro,
+  .about-curiosities-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .about-curiosities-quote {
+    font-size: 18px;
+    margin: 20px 0;
+    padding-left: 12px;
+  }
+
+  .about-curiosities-image-section {
+    min-height: 200px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -189,6 +335,23 @@
 
   .about-quote-large {
     font-size: 18px;
+  }
+
+  .about-curiosities-text-section {
+    padding: 20px 15px;
+  }
+
+  .about-curiosities-title {
+    font-size: 22px;
+  }
+
+  .about-curiosities-intro,
+  .about-curiosities-description {
+    font-size: 13px;
+  }
+
+  .about-curiosities-quote {
+    font-size: 16px;
   }
 
 }
