@@ -128,21 +128,21 @@
 }
 
 .about-curiosities-content {
-    display: flex;
-    min-height: 500px;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  min-height: 500px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .about-curiosities-text-section {
-    padding: 60px 50px;
-    color: #6b5b47;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: 600px;
+  padding: 60px 50px;
+  color: #6b5b47;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 600px;
 }
 
 .about-curiosities-image-section {
@@ -188,22 +188,22 @@
   font-weight: 600;
 }
 
-.about-curiosities-middle-content{
-padding: 32px 64px;
+.about-curiosities-middle-content {
+  padding: 32px 220px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  align-self: center;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* max-width: 1200px; */
+  /* align-self: center; */
 }
 
-.about-curiosities-middle-content > p{
- text-align: center;
+.about-curiosities-middle-content>p {
+  text-align: center;
 }
 
-.about-curiosities-middle-content > h2{
- text-align: center;
+.about-curiosities-middle-content>h2 {
+  text-align: center;
 }
 
 /* Responsive Design */
@@ -235,6 +235,11 @@ padding: 32px 64px;
   .about-curiosities-title {
     font-size: 32px;
   }
+
+  .about-curiosities-middle-content {
+    padding: 32px 80px;
+
+  }
 }
 
 @media (max-width: 768px) {
@@ -263,7 +268,6 @@ padding: 32px 64px;
   }
 
   .about-curiosities-container {
-    margin: 10px;
     border-radius: 12px;
   }
 
@@ -346,9 +350,19 @@ padding: 32px 64px;
   .about-curiosities-image-section {
     min-height: 200px;
   }
+
+  .about-curiosities-middle-content {
+    padding: 32px 32px;
+
+  }
 }
 
 @media (max-width: 320px) {
+  .about-curiosities-middle-content {
+    padding: 8px 8px;
+
+  }
+
   .about-card {
     padding: 20px 12px;
   }
