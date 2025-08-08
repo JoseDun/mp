@@ -123,6 +123,8 @@
 /* seccion de embarazo */
 .about-curiosities-container {
   background: #f4e5d1;
+  padding-bottom: 16px;
+  padding-top: 16px;
 }
 
 .about-curiosities-content {
@@ -184,6 +186,24 @@
 .about-curiosities-highlight {
   color: #8b7355;
   font-weight: 600;
+}
+
+.about-curiosities-middle-content{
+padding: 32px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  align-self: center;
+}
+
+.about-curiosities-middle-content > p{
+ text-align: center;
+}
+
+.about-curiosities-middle-content > h2{
+ text-align: center;
 }
 
 /* Responsive Design */
