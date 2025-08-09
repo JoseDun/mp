@@ -13,6 +13,222 @@
   box-sizing: border-box;
 }
 
+/* Help section */
+
+/* Sección principal */
+/* Background pattern */
+main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 100px 100px, 150px 150px, 80px 80px;
+  z-index: -1;
+}
+
+.perinatal-container {
+
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-image: url('/assets/Mama-lactante-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.perinatal-header {
+  text-align: center;
+  max-width: 600px;
+}
+
+.perinatal-header h1 {
+  font-size: 2.2rem;
+  color: #b8956a;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.perinatal-header p {
+  font-size: 1.1rem;
+  color: #8a7a6b;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.perinatal-header .perinatal-subtitle {
+  font-size: 1rem;
+  color: #9a8a7b;
+  font-style: italic;
+}
+
+.perinatal-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.perinatal-service-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 25px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 220px;
+  aspect-ratio: 3/2;
+  box-shadow:
+    0 8px 32px rgba(184, 149, 106, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.perinatal-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 12px 40px rgba(184, 149, 106, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.perinatal-service-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d4c4a8, #c4b196);
+  border-radius: 50%;
+  font-size: 20px;
+  color: #8a7a6b;
+  box-shadow: 0 4px 12px rgba(184, 149, 106, 0.2);
+}
+
+.perinatal-service-card h3 {
+  font-size: 1.2rem;
+  color: #b8956a;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.perinatal-service-card p {
+  font-size: 0.85rem;
+  color: #7a6a5b;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.perinatal-cta-button {
+  background: linear-gradient(135deg, #d4c4a8, #c4b196);
+  color: #6a5a4b;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(184, 149, 106, 0.3);
+  margin-top: 20px;
+}
+
+.perinatal-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 149, 106, 0.4);
+  background: linear-gradient(135deg, #c4b196, #b8a890);
+}
+
+.perinatal-cta-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .perinatal-services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 450px;
+  }
+
+  .perinatal-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .perinatal-header p {
+    font-size: 1rem;
+  }
+
+  .perinatal-service-card {
+    padding: 25px 20px;
+    min-height: 180px;
+    aspect-ratio: 4/3;
+  }
+
+  .perinatal-service-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .perinatal-service-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .perinatal-service-card p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .perinatal-container {
+    padding: 20px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 20px 15px;
+  }
+
+  .perinatal-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .perinatal-service-card {
+    padding: 20px 15px;
+    min-height: 160px;
+    aspect-ratio: 5/4;
+  }
+
+  .perinatal-cta-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+
+  .perinatal-service-card p {
+    font-size: 0.75rem;
+  }
+}
+
 .about-card {
   background: #e3ccb4;
   color: #6b5b47;
