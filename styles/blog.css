@@ -94,7 +94,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .contact-main-content {
+  .blog-main-content {
     flex-wrap: wrap;
   }
 
@@ -154,7 +154,7 @@ body {
 
 @media (max-width: 480px) {
 
-  .contact-main-content {
+  .blog-main-content {
     padding-top: 0px;
   }
 

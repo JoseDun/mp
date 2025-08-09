@@ -14,7 +14,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="../index.css" />
-  <link rel="stylesheet" href="../styles/aboutMe.css" />
+  <link rel="stylesheet" href="../styles/psicologiaPerinatal.css" />
   <script defer src="../index.js"></script>
 </head>
 
@@ -34,7 +34,7 @@
               <img src="../assets/downArrow.svg" alt="arrow down" class="arrow-down">
             </div>
             <ul class="submenu">
-              <li><a href="/pages/psicologiaPerinatal.html">Psicología Perinatal</a></li>
+              <li><a>Psicología Perinatal</a></li>
               <li><a>Psicología Infantil</a></li>
               <li><a>Asesoría De Lactancia</a></li>
               <li><a>Asesoría Sueño Infantil</a></li>
@@ -205,12 +205,13 @@
 
         <h2>"Actualmente, ver crecer a mi hijo es mi mejor pasatiempos"</h2>
 
-        <p>Me quedo fascinada al observar cómo interioriza todo su mundo externo y cómo se asombra ante cadadescubrimiento. Sin duda alguna, es mi proyecto más apasionante y con el que más estoy creciendo a nivel
+        <p>Me quedo fascinada al observar cómo interioriza todo su mundo externo y cómo se asombra ante
+          cadadescubrimiento. Sin duda alguna, es mi proyecto más apasionante y con el que más estoy creciendo a nivel
           personal.</p>
       </div>
 
       <div class="about-curiosities-content">
-          <picture class="about-curiosities-image-section">
+        <picture class="about-curiosities-image-section">
           <img src="../assets/Maria-Palos-Cuadro.png" alt="Guía de lactancia">
         </picture>
         <div class="about-curiosities-text-section">
@@ -312,42 +313,61 @@
         </div>
       </div>
     </section>
-    <!-- Newsletter AboutMe Section -->
-    <section class="newsletter">
-      <div class="container">
-        <div class="newsletter-content">
-          <div class="newsletter-text">
-            <h2>Transforma tu experiencia como mamá lactante</h2>
-            <p>¿Estás embarazada y te gustaría prepararte para <strong>una lactancia materna
-                exitosa</strong>? ¡Tengo algo especial para ti! He creado una <strong>guía
-                completa</strong> con todos los pasos y consejos que necesitas para comenzar tu viaje de
-              lactancia con confianza y éxito.</p>
-            <p>En esta guía, encontrarás:</p>
-            <ul>
-              <li>Consejos prácticos para prepararte durante el embarazo.</li>
-              <li>Información esencial sobre la lactancia materna.</li>
-              <li>Estrategias para superar las dificultades comunes.</li>
-            </ul>
-            <p>No estás sola en este viaje. Como asesora de lactancia y psicóloga perinatal, he ayudado a
-              muchas mamás a lograr una lactancia exitosa, y ahora quiero ayudarte a ti.</p>
-            <p><strong>¡Descarga tu guía gratuita ahora y da el primer paso hacia una experiencia de
-                lactancia materna enriquecedora y exitosa!</strong></p>
-            <form class="newsletter-form" id="newsletter-form">
-              <input type="text" placeholder="Nombre" required>
-              <input type="email" placeholder="Correo Electrónico" required>
-              <button type="submit">Quiero mi guía de lactancia exitosa</button>
-            </form>
-            <label class="privacy-label">
-              <input type="checkbox" required>
-              He leído y acepto la Política de Privacidad.
-            </label>
-          </div>
-          <picture class="newsletter-image">
-            <img src="../assets/Maria-Palos-Blanco.png" alt="Guía de lactancia">
-          </picture>
+    <!-- Main Contact Content -->
+    <div class="contact-main-content">
+      <!-- Hero Contact Section -->
+      <section class="contact-hero-section">
+        <div class="contact-image">
+          <img src="../assets/Maria-Palos-contacto.png" alt="María Palos - Psicóloga Perinatal" />
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- Contact Form Section -->
+      <section class="contact-section">
+        <article class="contact-container">
+          <div>
+            <h2 class="contact-title">¿En qué puedo ayudarte?</h2>
+            <p class="contact-subtitle">Si tienes alguna duda, puedes ponerte en contacto conmigo y contarme qué es lo
+              que
+              necesitas.</p>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+              </div>
+              <div class="form-group">
+                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Correo electrónico" required />
+            </div>
+            <div class="form-group">
+              <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="6" required></textarea>
+            </div>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="privacidad" name="privacidad" required />
+                <span class="checkmark"></span>
+                Acepto la <a href="#" class="privacy-link">Política de Privacidad.</a>
+              </label>
+            </div>
+            <button type="submit" class="submit-btn">Quiero contactar</button>
+          </form>
+          <div class="privacy-text">
+            <p>María Palos solicita su consentimiento para prestarle el servicio solicitado y contestar a las cuestiones
+              planteadas. La legitimación tiene como base jurídica el consentimiento del interesado para los fines
+              expresados. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal. En
+              todo caso, los datos que nos facilitas están ubicados en servidores cuya sede se encuentra dentro del
+              territorio de la UE o gestionados por Encargados de Tratamiento acogidos al acuerdo Privacy Shield. Tiene
+              derecho a acceder, rectificar y suprimir los datos, así como otros derechos, como se explica en la
+              información adicional. Si no facilitas los datos solicitados como obligatorios, puede dar como resultado
+              no
+              poder cumplir con la finalidad para los que se solicitan.</p>
+          </div>
+        </article>
+      </section>
+    </div>
 
   </main>
 
